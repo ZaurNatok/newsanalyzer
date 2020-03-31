@@ -1,0 +1,139 @@
+.analytics {
+    max-width: 1440px;
+    margin: auto;
+}
+
+.analytics-graph__head {
+    display: flex;
+    font-family: 'Roboto', serif;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    color: #B6BCBF;
+    border-bottom: 1px solid #1A1B22;
+}
+
+.analytics-graph__first-column {
+    width: 60px;
+    margin-right: 40px;
+}
+
+.analytics__row {
+    display: flex;
+    justify-content: space-between;
+    margin: 16px 0 0 104px;
+}
+
+.row__cell {
+    margin: 0;
+    font-family: 'Roboto', serif;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    color: #B6BCBF;
+}
+
+.analytics-graph__columns {
+    display: flex;
+}
+
+.analytics-graph__y {
+    width: 104px;
+}
+
+.analytics-graph__column-y:not(:first-child){
+    margin-top: 56px;
+}
+
+.analytics-graph__column-y:first-child {
+    margin: 18px 0 0;
+}
+
+.analytics-graph__column-y {
+    font-family: 'Roboto', serif;
+    font-weight: normal;
+    font-size: 18px;
+    color: #1A1B22;
+    line-height: 24px;
+}
+
+.analytics__statistics {
+    padding-bottom: 80px;
+}
+
+.analytics-graph__column-x {
+    font-family: 'Roboto', serif;
+    font-size: 12px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.4px;
+    color: #FFFFFF;
+    font-weight: 700;
+    background: #2f71e5;
+    padding: 4px 0 4px 6px;
+    margin-bottom: 0;
+    margin-top: 56px;
+}
+
+.analytics-graph__column-x:first-child {
+    margin-top: 18px;
+}
+
+.analytics-graph__x {
+    width: 100%;
+}
+
+@media screen and (max-width:414px) {
+
+    .analytics__statistics .section__info {
+        margin: 0;
+    }
+
+    .analytics__statistics {
+        padding: 16px 16px 0;
+        padding-bottom: 24px;
+    }
+
+    .analytics__statistics .section__text:not(:first-child) {
+        margin: 4px 0 0;
+    }
+
+    .analytics__row {
+        display: none;
+    }
+}
+
+@media screen and (min-width:415px) and (max-width:767px) {
+    .analytics .section__info {
+        margin: 0;
+    }
+
+    .analytics__statistics {
+        padding: 16px 16px 0;
+        padding-bottom: 24px;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:1439px) {
+    .analytics .section__info {
+        margin: 0;
+    }
+
+    .analytics__statistics {
+        padding: 0 40px 0;
+        padding-bottom: 40px;
+    }
+
+    .statistics {
+        margin: 0 40px 0 !important;
+    }
+
+    .section__small-title {
+        margin: 0 0 40px !important;
+    }
+}

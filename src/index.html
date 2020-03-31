@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang='ru'>
+    <head>
+        <title>NewsAnalyzer</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Сервис для поиска и анадиза мировых событий.">
+        <meta name="author" content="Zaur Natok" />
+        <!-- Стили -->
+        <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
+        <!-- Фавикон -->
+        <link rel="apple-touch-icon" sizes="180x180" href="<%=require('./images/favicon_package/apple-touch-icon.png').default%>">
+        <link rel="icon" type="image/png" sizes="32x32" href="<%=require('./images/favicon_package/favicon-32x32.png').default%>">
+        <link rel="icon" type="image/png" sizes="16x16" href="<%=require('./images/favicon_package/favicon-16x16.png').default%>">
+        <link rel="mask-icon" href="<%=require('./images/favicon_package/safari-pinned-tab.svg').default%>" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+    </head>
+    <body>
+        <div class="page">
+            
+            <!-- Секция поиска новостей, header с меню и логотипом -->
+
+            <section class="search">
+                <header class="header header_light">
+                    <a href="index.html" class="header__logo header__logo_light" title="Перейти на главную">NewsAnalyzer</a>
+                    <ul class="menu menu_top">
+                        <li class="menu__item menu__item_top menu__item_active_light"><a href="#">Главная</a></li>
+                        <li class="menu__item menu__item_top"><a href="about.html">О проекте</a></li>
+                    </ul>
+                </header>  
+                <h1 class="search__title">Что в мире творится?</h1>
+                <p class="search__subtitle">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.</p>
+                <form action="" class="search__form">
+                    <input type="text" class="search__search-field" placeholder="Введите тему новости">
+                    <button class="search__button">Искать</button>
+                </form>
+                
+            </section>
+
+            <!-- Секция с основным контентом -->
+
+            <section class="main">
+
+                <div class="section news__not-found">
+                    <img class="news__not-found-icon" src="<%=require('./images/not-found.svg').default%>" alt="Ничего не найдено">
+                    <h3 class="news__not-found-title">Ничего не найдено</h3>
+                    <p class="news__not-found-text">К сожалению, по вашему запросу ничего не найдено.</p>
+                </div>
+                
+                <div class="section loading">
+                    <i class="loading__circle-preloader"></i>
+                    <p class="loading__loading-text">Идет поиск новостей...</p>
+                </div>
+    
+                <div class="section news__result">
+                    
+                    <div class="section__topline">
+                        <h2 class="section__title">Результаты поиска</h2>
+                        <a href="analytics.html" class="section__link">Посмотреть аналитику &gt;</a>
+                    </div>
+
+                    <div class="news__items">
+                        <a href="#" class="news__item_link">
+                            <div class="news__item">
+                                <div class="item__image" style="background-image: url('<%=require('./images/image_08.png').default%>');"></div>
+                                <div class="item__description">
+                                    <p class="item__date">2 августа, 2019</p>
+                                    <h2 class="item__title">Национальное достояние - парки</h2>
+                                    <p class="item__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
+                                    <p class="item__link">Лента.ру</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="news__item_link">
+                            <div class="news__item">
+                                <div class="item__image" style="background-image: url('<%=require('./images/image_04.png').default%>');"></div>
+                                <div class="item__description">
+                                    <p class="item__date">2 августа, 2019</p>
+                                    <h2 class="item__title">Лесные огоньки: история одной фотографии</h2>
+                                    <p class="item__text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного из местных чудес природы.</p>
+                                    <p class="item__link">Медуза</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="news__item_link">
+                            <div class="news__item">
+                                <div class="item__image" style="background-image: url('<%=require('./images/image_04.png').default%>');"></div>
+                                <div class="item__description">
+                                    <p class="item__date">2 августа, 2019</p>
+                                    <h2 class="item__title">Лесные огоньки: история одной фотографии</h2>
+                                    <p class="item__text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного из местных чудес природы.</p>
+                                    <p class="item__link">Медуза</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="news__item_link">
+                            <div class="news__item">
+                                <div class="item__image" style="background-image: url('<%=require('./images/image_04.png').default%>');"></div>
+                                <div class="item__description">
+                                    <p class="item__date">2 августа, 2019</p>
+                                    <h2 class="item__title">Лесные огоньки: история одной фотографии</h2>
+                                    <p class="item__text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного из местных чудес природы.</p>
+                                    <p class="item__link">Медуза</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="news__item_link">
+                            <div class="news__item">
+                                <div class="item__image" style="background-image: url('<%=require('./images/image_07.png').default%>');"></div>
+                                <div class="item__description">
+                                    <p class="item__date">2 августа, 2019</p>
+                                    <h2 class="item__title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h2>
+                                    <p class="item__text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
+                                    <p class="item__link">Риа</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="news__item_link">
+                            <div class="news__item">
+                                <div class="item__image" style="background-image: url('<%=require('./images/image_07.png').default%>');"></div>
+                                <div class="item__description">
+                                    <p class="item__date">2 августа, 2019</p>
+                                    <h2 class="item__title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h2>
+                                    <p class="item__text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
+                                    <p class="item__link">Риа</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="news__item_link">
+                            <div class="news__item">
+                                <div class="item__image" style="background-image: url('<%=require('./images/image_07.png').default%>');"></div>
+                                <div class="item__description">
+                                    <p class="item__date">2 августа, 2019</p>
+                                    <h2 class="item__title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h2>
+                                    <p class="item__text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
+                                    <p class="item__link">Риа</p>
+                                </div>
+                            </div>
+                        </a>
+                        
+                    </div>
+                    <button class="news__show-more">Показать еще</button>
+                </div>
+
+            </section>
+
+            <!-- Секция "Об авторе" -->
+
+            <section class="section section_white about-author">
+                <img src="<%=require('./images/author-photo.jpg').default%>" alt="Автор сайта Наток Заур" class="about-author__photo">
+                <div class="about-author__description">
+                    <h2 class="section__title">Об авторе</h2>
+                    <p class="section__text">Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владеете.</p>
+                    <p class="section__text">Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам.</p>
+                </div>    
+            </section>
+
+            <!-- Футер -->
+
+            <footer class="footer">
+                <p class="footer__copyright">© 2020. NewsAnalyzer</p>
+                <ul class="menu menu_footer">
+                    <li class="menu__item menu__item_footer"><a href="index.html">Главная</a></li>
+                    <li class="menu__item menu__item_footer"><a href="about.html">О проекте</a></li>
+                    <li class="menu__item menu__item_footer"><a href="https://praktikum.yandex.ru/" target="_blank">Яндекс.Практикум</a></li>
+                </ul>
+                <ul class="footer__social">
+                    <li><img src="<%=require('./images/social-icon-git.svg').default%>" alt="Портфолио на GitHub" class="social__icon"></li>
+                    <li><img src="<%=require('./images/social-icon-fb.svg').default%>" alt="Мой аккаунт в фейсбук" class="social__icon"></li>
+                </ul>
+            </footer>
+        </div>
+    </body>
+</html>

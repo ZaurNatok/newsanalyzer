@@ -1,0 +1,19 @@
+.footer__social {
+    display: flex;
+    list-style: none;
+}
+
+.footer__social li {
+    margin-right: 20px;
+}
+
+.social__icon {
+    width: 20px;
+    height: 20px;
+}
+
+@media screen and (max-width:529px) {
+    .footer__social li:not(:first-child) {
+        margin-right: 0;
+    }
+}

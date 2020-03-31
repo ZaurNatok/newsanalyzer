@@ -1,0 +1,36 @@
+@import url('__logo/header__logo.css');
+
+.header {
+    height: 80px;
+    padding: 0 104px;
+    width: -webkit-fill-available;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.header_light {
+    background: rgba(196, 196, 196, 0.01);
+    box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.2);
+}
+
+.header_dark {
+    background: #FFFFFF;
+    box-shadow: inset 0px -1px 0px #D1D2D6;
+}
+
+@media screen and (max-width:767px) {
+    .header {
+        padding: 0 16px;
+        height: 56px;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width: 1439px) {
+    .header {
+        padding: 0 40px;
+        height: 64px;
+    }
+}

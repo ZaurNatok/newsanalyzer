@@ -1,0 +1,24 @@
+.search__form {
+    width: 608px;
+    z-index: 1;
+    position: relative;
+}
+
+@media screen and (max-width:529px) {
+    .search__form {
+        max-width: calc(100% - 32px);
+    }
+}
+
+
+@media screen and (min-width:530px) and (max-width:767px) { 
+    .search__form {
+        max-width: calc(100% - 120px);
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:1439px) {
+    .search__form {
+        width: 448px;
+    }
+}
