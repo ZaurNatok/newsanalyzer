@@ -1,7 +1,7 @@
 {
-  "name": "mesto",
+  "name": "newsanalyzer",
   "version": "1.0.0",
-  "description": "Учебный проект №11 - Яндекс.Практикум",
+  "description": "Диплосная работа - Яндекс.Практикум",
   "main": "index.js",
   "scripts": {
     "dev": "NODE_ENV=development webpack-dev-server --mode development --open --watch",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ZaurNatok/mesto_project.git"
+    "url": "git+https://github.com/ZaurNatok/NewsAnalyzer.git"
   },
   "author": "Zaur Natok",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ZaurNatok/mesto_project/issues"
+    "url": "https://github.com/ZaurNatok/NewsAnalyzer/issues"
   },
-  "homepage": "https://github.com/ZaurNatok/mesto_project#readme",
+  "homepage": "https://github.com/ZaurNatok/NewsAnalyzer#readme",
   "devDependencies": {
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.8.7",
