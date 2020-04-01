@@ -97,6 +97,10 @@
     margin: 0 0 48px;
 }
 
+.statistics {
+    max-width: 100%;
+}
+
 @media screen and (max-width:414px) {
     .section {
         padding: 24px 0;
