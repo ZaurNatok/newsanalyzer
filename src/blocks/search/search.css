@@ -13,14 +13,20 @@
     align-items: center;
     max-width: 1440px;
     height: 576px;
-    background-image: url('../../images/main-image.jpg');
+    position: relative;
+    overflow: hidden;
 }
 
-@media screen and (max-width:414px) {
-    .search {
-        background-image: url('../../images/main-image-small.png');
-    }
+.search__image-container {
+    position: absolute;
+    height: 100%;
 }
+
+.search__image {
+    height: 100%;
+    width: -webkit-fill-available;
+}
+
 
 @media screen and (min-width:415px) and (max-width:767px) {
     .search {

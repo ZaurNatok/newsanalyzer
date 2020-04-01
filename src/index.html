@@ -22,6 +22,11 @@
             <!-- Секция поиска новостей, header с меню и логотипом -->
 
             <section class="search">
+                <picture class="search__image-container">
+                    <source srcset="<%=require('./images/main-image-small.png').default%>" media="(max-width: 320px)" class="search__image">
+                    <source srcset="<%=require('./images/main-image.jpg').default%>" media="(max-width: 768px)" class="search__image">
+                    <img src="<%=require('./images/main-image.jpg').default%>" alt="Что творится в мире?" class="search__image">
+                </picture>
                 <header class="header header_light">
                     <a href="index.html" class="header__logo header__logo_light" title="Перейти на главную">NewsAnalyzer</a>
                     <ul class="menu menu_top">
@@ -32,7 +37,7 @@
                 <h1 class="search__title">Что в мире творится?</h1>
                 <p class="search__subtitle">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.</p>
                 <form action="" class="search__form">
-                    <input type="text" class="search__search-field" placeholder="Введите тему новости">
+                    <input type="text" class="search__search-field" placeholder="Введите тему новости" required>
                     <button class="search__button">Искать</button>
                 </form>
                 
@@ -40,7 +45,7 @@
 
             <!-- Секция с основным контентом -->
 
-            <section class="main">
+            <section class="news">
 
                 <div class="section news__not-found">
                     <img class="news__not-found-icon" src="<%=require('./images/not-found.svg').default%>" alt="Ничего не найдено">

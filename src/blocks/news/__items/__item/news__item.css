@@ -108,6 +108,7 @@
     .news__item {
         height: 420px;
         max-width: 320px;
+        margin: auto;
     }
 
     .item__description {
