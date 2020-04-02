@@ -1,0 +1,25 @@
+.news__not-found-title {
+    margin: auto;
+    font-family: 'Roboto Slab', sans-serif;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 30px;
+    color: #1A1B22;
+}
+
+.news__not-found-text {
+    margin: auto;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    color: #B6BCBF;
+    width: 356px;
+    margin-top: 16px;
+}
+
+@media screen and (max-width:320px) {
+    .news__not-found-text {
+        width: calc(100% - 32px);
+    }
+}

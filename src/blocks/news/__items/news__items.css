@@ -1,0 +1,114 @@
+@import url('__item/news__item.css');
+
+.news__result {
+    width: 100%;
+}
+
+.news__items {
+    width: calc(100% - 208px);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: auto;
+    flex-wrap: wrap;
+    margin-bottom: 64px;
+    justify-content: space-between;
+}
+
+.news__topline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(100% - 208px);
+    margin: auto;
+}
+
+.news__title {
+    font-family: 'Roboto Slab', serif;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 46px;
+    color: #1A1B22;
+    margin: 0;
+}
+
+.news__link {
+    font-family: 'Roboto', serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #1A1B22;
+    margin: 0;
+    text-decoration: none;
+    transition: .2s;
+}
+
+.news__link:hover {
+    opacity: .6;
+}
+
+.news__show-more {
+    font-family: 'Roboto', serif;
+    padding: 20px 84px;
+    background: #FFFFFF;
+    border-radius: 80px;
+    text-decoration: none;
+    color: #1A1B22;
+    border: none;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.news__show-more:hover {
+    background: #FFFFFF;
+    opacity: 0.6;
+}
+
+.news__show-more:focus {
+    outline: none;
+}
+
+@media screen and (max-width:500px) {
+    .news__items {
+        width: calc(100% - 32px);
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 12px;
+    }
+
+    .news__show-more {
+        margin-bottom: 12px;
+    }
+}
+
+@media screen and (min-width:501px) and (max-width:767px) {
+    .news__items {
+        width: calc(100% - 80px);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-bottom: 12px;
+        grid-column-gap: 8px;
+        grid-row-gap: 8px;
+    }
+
+    .news__show-more {
+        margin-bottom: 12px;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:1439px) {
+    .news__items {
+        width: calc(100% - 80px);
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-bottom: 22px;
+        grid-column-gap: 8px;
+        grid-row-gap: 8px;
+    }
+
+    .news__show-more {
+        margin-bottom: 0px;
+    }
+}

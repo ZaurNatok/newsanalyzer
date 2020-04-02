@@ -1,0 +1,121 @@
+.tech {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    max-width: 1440px;
+    background: #F5F6F7;
+    padding: 80px 0;
+    margin: auto;
+}
+
+.tech__container {
+    display: flex;
+    margin-right: 112px;
+}
+
+.tech__item:first-child {
+    margin-left: 0px;
+}
+
+.tech__item {
+    margin-left: 40px;
+}
+
+.tech_title {
+    font-family: 'Roboto Slab', serif;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 46px;
+    color: #1A1B22;
+    margin: 0 0 64px 0;
+    width: 344px;
+    text-align: left;
+    margin-left: 104px;
+}
+
+.tech__item-title {
+    font-family: 'Roboto', serif;;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.2px;
+    color: #1A1B22;
+    margin: 0 0 9px 0;
+}
+
+@media screen and (max-width:414px) {
+    .tech {
+        flex-direction: column;
+        padding: 32px 0 16px;
+    }
+
+    .tech_title {
+        margin: 0 40px 16px;
+        font-size: 30px;
+        line-height: 40px;
+        width: auto;
+    }
+
+    .tech__container {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 16px;
+        justify-content:space-around;
+    }
+
+    .tech__item {
+        margin: 0;
+    }
+}
+
+@media screen and (min-width:415px) and (max-width:767px) {
+    .tech {
+        flex-direction: column;
+        padding: 32px 0 40px;
+    }
+
+    .tech_title {
+        margin: 0 40px 40px;
+        font-size: 30px;
+        line-height: 40px;
+        width: 336px;
+    }
+
+    .tech__container {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 16px;
+        justify-content:space-around;
+    }
+
+    .tech__item {
+        margin: 0;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:1439px) {
+    .tech {
+        flex-direction: column;
+        padding: 32px 0 40px;
+    }
+
+    .tech_title {
+        margin: 0 40px 40px;
+        font-size: 30px;
+        line-height: 34px;
+        width: 336px;
+    }
+
+    .tech__container {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 16px;
+        justify-content:space-around;
+    }
+
+    .tech__item {
+        margin: 0;
+    }
+}

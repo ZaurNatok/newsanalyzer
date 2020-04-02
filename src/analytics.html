@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang='ru'>
+    <head>
+        <title>NewsAnalyzer</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Сервис для поиска и анадиза мировых событий.">
+        <meta name="author" content="Zaur Natok" />
+        <!-- Стили -->
+        <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
+        <!-- Фавикон -->
+        <link rel="apple-touch-icon" sizes="180x180" href="<%=require('./images/favicon_package/apple-touch-icon.png').default%>">
+        <link rel="icon" type="image/png" sizes="32x32" href="<%=require('./images/favicon_package/favicon-32x32.png').default%>">
+        <link rel="icon" type="image/png" sizes="16x16" href="<%=require('./images/favicon_package/favicon-16x16.png').default%>">
+        <link rel="mask-icon" href="<%=require('./images/favicon_package/safari-pinned-tab.svg').default%>" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+    </head>
+    <body>
+        <!-- Секция с информацией о запросе -->
+
+        <section class="analytics">
+            <header class="header header_dark">
+                <a href="index.html" class="header__logo header__logo_dark" title="Перейти на главную">NewsAnalyzer</a>
+                <ul class="menu">
+                    <li class="menu__item menu__item_top menu__item_dark"><a href="./index.html">Главная</a></li>
+                    <li class="menu__item menu__item_top menu__item_dark"><a href="./about.html">О проекте</a></li>
+                </ul>
+            </header>
+            
+            <div class="breadcrumbs">
+                <a href="./index.html" class="breadcrumbs__link">Главная</a>
+                <a nohref="./analytics.html" class="breadcrumbs__link breadcrumbs__link_active"> Аналитика</a>
+            </div>
+
+            <div class="analytics__statistics">
+                <div class="section__info">
+                    <h2 class="section__title">Вы спросили: "Путешествия"</h2>
+                    <p class="section__text">Новостей за неделю: <span class="section__text section__text_important">34 424</span></p>
+                    <p class="section__text">Упоминаний в загаловках: <span class="section__text section__text_important">235</span></p>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Секция "Аналитика" -->
+
+        <section class="section">
+            <div class="section__info statistics">
+                <h3 class="section__small-title">Аналитика по дням</h3>
+                <div class="analytics-graph">
+                    <div class="analytics-graph__head">
+                        <p class="analytics-graph__first-column">Дата (август)</p>
+                        <p class="analytics-graph__second-column">Кол-во упоминаний</p>
+                    </div>
+                    <div class="analytics__row">
+                        <p class="row__cell">0</p>
+                        <p class="row__cell">25</p>
+                        <p class="row__cell">50</p>
+                        <p class="row__cell">75</p>
+                        <p class="row__cell">100</p>
+                    </div>
+                    <div class="analytics-graph__columns">
+                        <div class="analytics-graph__y">
+                            <p class="analytics-graph__column-y">19, пн</p>
+                            <p class="analytics-graph__column-y">20, вт</p>
+                            <p class="analytics-graph__column-y">21, ср</p>
+                            <p class="analytics-graph__column-y">22, чт</p>
+                            <p class="analytics-graph__column-y">23, пт</p>
+                            <p class="analytics-graph__column-y">24, сб</p>
+                            <p class="analytics-graph__column-y">25, вс</p>
+                        </div>
+                        <div class="analytics-graph__x">
+                            <p class="analytics-graph__column-x" style="width: 15%">15</p>
+                            <p class="analytics-graph__column-x" style="width: 18%">18</p>
+                            <p class="analytics-graph__column-x" style="width: 11%">11</p>
+                            <p class="analytics-graph__column-x" style="width: 39%">39</p>
+                            <p class="analytics-graph__column-x" style="width: 45%">45</p>
+                            <p class="analytics-graph__column-x" style="width: 73%">73</p>
+                            <p class="analytics-graph__column-x" style="width: 34%">34</p>
+                        </div>
+                    </div>
+                    <div class="analytics__row">
+                        <p class="row__cell">0</p>
+                        <p class="row__cell">25</p>
+                        <p class="row__cell">50</p>
+                        <p class="row__cell">75</p>
+                        <p class="row__cell">100</p>
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </section>
+
+        <!-- Футер -->
+        
+        <footer class="footer">
+            <p class="footer__copyright">© 2020. NewsAnalyzer</p>
+            <ul class="menu menu_footer">
+                <li class="menu__item menu__item_footer"><a href="index.html">Главная</a></li>
+                <li class="menu__item menu__item_footer"><a href="about.html">О проекте</a></li>
+                <li class="menu__item menu__item_footer"><a href="https://praktikum.yandex.ru/" target="_blank">Яндекс.Практикум</a></li>
+            </ul>
+            <ul class="footer__social">
+                <li><a href="https://github.com/ZaurNatok" target="_blank"><img src="<%=require('./images/social-icon-git.svg').default%>" alt="Портфолио на GitHub" class="social__icon"></a></li>
+                <li><a href="https://www.facebook.com/znatok" target="_blank"><img src="<%=require('./images/social-icon-fb.svg').default%>" alt="Мой аккаунт в фейсбук" class="social__icon"></a></li>
+            </ul>
+        </footer>
+    </body>
+</html>

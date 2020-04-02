@@ -1,0 +1,6 @@
+@import url('__loader.css/loading__loader.css');
+
+.loading {
+    text-align: center;
+    display: none;
+}

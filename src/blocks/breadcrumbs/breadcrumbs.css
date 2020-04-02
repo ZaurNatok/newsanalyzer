@@ -1,0 +1,39 @@
+.breadcrumbs {
+    margin: 40px 104px 90px;
+}
+
+.breadcrumbs__link {
+    font-family: 'Roboto', serif;
+    font-size: 18px;
+    line-height: 24px;
+    color: #1A1B22;
+    text-decoration: none;
+}
+
+.breadcrumbs__link_active {
+    color: #B6BCBF;
+}
+
+.breadcrumbs__link:not(:first-child)::before {
+    content: '/';
+}
+
+@media screen and (max-width:414px) {
+    .breadcrumbs {
+        display: none;
+    }
+}
+
+@media screen and (min-width:415px) and (max-width:767px) {
+    .breadcrumbs {
+        display: block;
+        margin: 16px;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:1439px) {
+    .breadcrumbs {
+        display: block;
+        margin: 32px 40px 64px;
+    }
+}

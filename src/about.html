@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang='ru'>
+    <head>
+        <title>NewsAnalyzer</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Сервис для поиска и анадиза мировых событий.">
+        <meta name="author" content="Zaur Natok" />
+        <!-- Стили -->
+        <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
+        <!-- Фавикон -->
+        <link rel="apple-touch-icon" sizes="180x180" href="<%=require('./images/favicon_package/apple-touch-icon.png').default%>">
+        <link rel="icon" type="image/png" sizes="32x32" href="<%=require('./images/favicon_package/favicon-32x32.png').default%>">
+        <link rel="icon" type="image/png" sizes="16x16" href="<%=require('./images/favicon_package/favicon-16x16.png').default%>">
+        <link rel="mask-icon" href="<%=require('./images/favicon_package/safari-pinned-tab.svg').default%>" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+    </head>
+    <body>
+        <div class="page">
+        <!-- Секция с информацией для клиентов -->
+        <header class="header header_dark">
+            <a href="index.html" class="header__logo header__logo_dark" title="Перейти на главную">NewsAnalyzer</a>
+            <ul class="menu">
+                <li class="menu__item menu__item_top menu__item_dark"><a href="index.html">Главная</a></li>
+                <li class="menu__item menu__item_top menu__item_dark menu__item_active_dark"><a href="#">О проекте</a></li>
+            </ul>
+        </header>
+
+        <section class="section section_white">
+            <div class="section__info">
+                <h2 class="section__title">Клиентам</h2>
+                <p class="section__text">Этот сайт — дипломный проект студента Яндекс.Практикума. Его цель — показать, чему научился студент, какими технологиями владеет.</p>
+                <p class="section__text">Вёрстка сайта выполнена по методологии БЭМ. Это делает сайт гибким и масштабируемым. Кроме того, добавлять новые страницы и функциональность проще и быстрее, чем в проектах, выполненных по другим методологиям. Также сайт проще и дешевле поддерживать.</p>
+                <p class="section__text">Карточки с новостями приходят с сервера и обрабатываются асинхронно. То есть сайт продолжает работать, пока от сервера приходит ответ. Это повышает удобство использования сервиса.</p>
+                <p class="section__text">При создании проекта была использована сборка технологией Webpack. Это современный подход к разработке сайтов. Код оптимизируется, а значит, сайт работает быстрее. Также сайт работает в старых браузерах. Даже если посетители — пользователи старых операционных систем, у них не будет проблем с отображением. А значит, потенциальная аудитория возрастает.</p>
+                <p class="section__text">Проект был проверен экспертами Яндекс.Практикума. Если вашему бизнесу нужен сайт, мы рекомендуем обратиться к этому студенту.</p>
+            </div>
+            
+        </section>
+
+        <!-- Секция "Используемые технологии" -->
+
+        <div class="tech">
+            <h2 class="tech_title">Используемые технологии</h2>
+            <div class="tech__container">
+                <div class="tech__item">
+                    <h3 class="tech__item-title">HTML</h3>
+                    <img src="<%=require('./images/html.svg').default%>" alt="Технология HTML" class="tech__image">
+                </div>
+                <div class="tech__item">
+                    <h3 class="tech__item-title">CSS</h3>
+                    <img src="<%=require('./images/css.svg').default%>" alt="Технология CSS" class="tech__image">
+                </div>
+                <div class="tech__item">
+                    <h3 class="tech__item-title">Java Script</h3>
+                    <img src="<%=require('./images/js.svg').default%>" alt="Технология JS" class="tech__image">
+                </div>
+                <div class="tech__item">
+                    <h3 class="tech__item-title">Webpack</h3>
+                    <img src="<%=require('./images/webpack.svg').default%>" alt="Технология Webpack" class="tech__image">
+                </div>
+            </div>
+        </div>
+
+        <!-- Секция "Об авторе" -->
+
+        <section class="section section_white about-author">
+            <img src="<%=require('./images/author-photo.jpg').default%>" alt="Автор сайта Наток Заур" class="about-author__photo">
+            <div class="about-author__description">
+                <h2 class="section__title">Об авторе</h2>
+                <p class="section__text">Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владеете.</p>
+                <p class="section__text">Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам.</p>
+            </div>    
+        </section>
+
+        <!-- Слайдер коммитов в Github -->
+
+        <section class="git section">
+            <div class="section__topline">
+                <h2 class="section__title">История коммитов из GitHub</h2>
+                <a href="https://github.com/ZaurNatok/NewsAnalyzer/commits/master" class="section__link" target="_blank">Открыть в Github &gt;</a>
+            </div>
+            
+            <!-- Swiper -->
+            <div class="slider swiper-container">
+                <div class="swiper-wrapper">
+
+                  <div class="slider__item swiper-slide">
+                    <p class="slider__item-date">14 августа, 2019</p>
+                    <div class="slider__author">
+                        <img src="<%=require('./images/author-photo.jpg').default%>" alt="Автор сайта Наток Заур" class="slider__item-image">
+                        <div class="slider__author-info">
+                            <p class="slider__author-name">Заур Наток</p>
+                            <p class="slider__autor-email">zmnatok@yandex.ru</p>
+                        </div>
+                    </div>
+                    <p class="slider__description">With Emmet, you can type CSS-like expressions that can be dynamically parsed, and produce output depending on what you type in the abb...</p>
+                  </div>
+
+                  <div class="slider__item swiper-slide">
+                    <p class="slider__item-date">14 августа, 2019</p>
+                    <div class="slider__author">
+                        <img src="<%=require('./images/author-photo.jpg').default%>" alt="Автор сайта Наток Заур" class="slider__item-image">
+                        <div class="slider__author-info">
+                            <p class="slider__author-name">Заур Наток</p>
+                            <p class="slider__autor-email">zmnatok@yandex.ru</p>
+                        </div>
+                    </div>
+                    <p class="slider__description">With Emmet, you can type CSS-like expressions that can be dynamically parsed, and produce output depending on what you type in the abb...</p>
+                  </div>
+
+                  <div class="slider__item swiper-slide">
+                    <p class="slider__item-date">14 августа, 2019</p>
+                    <div class="slider__author">
+                        <img src="<%=require('./images/author-photo.jpg').default%>" alt="Автор сайта Наток Заур" class="slider__item-image">
+                        <div class="slider__author-info">
+                            <p class="slider__author-name">Заур Наток</p>
+                            <p class="slider__autor-email">zmnatok@yandex.ru</p>
+                        </div>
+                    </div>
+                    <p class="slider__description">With Emmet, you can type CSS-like expressions that can be dynamically parsed, and produce output depending on what you type in the abb...</p>
+                  </div>
+
+                  <div class="slider__item swiper-slide">
+                    <p class="slider__item-date">14 августа, 2019</p>
+                    <div class="slider__author">
+                        <img src="<%=require('./images/author-photo.jpg').default%>" alt="Автор сайта Наток Заур" class="slider__item-image">
+                        <div class="slider__author-info">
+                            <p class="slider__author-name">Заур Наток</p>
+                            <p class="slider__autor-email">zmnatok@yandex.ru</p>
+                        </div>
+                    </div>
+                    <p class="slider__description">With Emmet, you can type CSS-like expressions that can be dynamically parsed, and produce output depending on what you type in the abb...</p>
+                  </div>
+
+                  <div class="slider__item swiper-slide">
+                    <p class="slider__item-date">14 августа, 2019</p>
+                    <div class="slider__author">
+                        <img src="<%=require('./images/author-photo.jpg').default%>" alt="Автор сайта Наток Заур" class="slider__item-image">
+                        <div class="slider__author-info">
+                            <p class="slider__author-name">Заур Наток</p>
+                            <p class="slider__autor-email">zmnatok@yandex.ru</p>
+                        </div>
+                    </div>
+                    <p class="slider__description">With Emmet, you can type CSS-like expressions that can be dynamically parsed, and produce output depending on what you type in the abb...</p>
+                  </div>
+
+                  <div class="slider__item swiper-slide">
+                    <p class="slider__item-date">14 августа, 2019</p>
+                    <div class="slider__author">
+                        <img src="<%=require('./images/author-photo.jpg').default%>" alt="Автор сайта Наток Заур" class="slider__item-image">
+                        <div class="slider__author-info">
+                            <p class="slider__author-name">Заур Наток</p>
+                            <p class="slider__autor-email">zmnatok@yandex.ru</p>
+                        </div>
+                    </div>
+                    <p class="slider__description">With Emmet, you can type CSS-like expressions that can be dynamically parsed, and produce output depending on what you type in the abb...</p>
+                  </div>
+
+                  <div class="slider__item swiper-slide">
+                    <p class="slider__item-date">14 августа, 2019</p>
+                    <div class="slider__author">
+                        <img src="<%=require('./images/author-photo.jpg').default%>" alt="Автор сайта Наток Заур" class="slider__item-image">
+                        <div class="slider__author-info">
+                            <p class="slider__author-name">Заур Наток</p>
+                            <p class="slider__autor-email">zmnatok@yandex.ru</p>
+                        </div>
+                    </div>
+                    <p class="slider__description">With Emmet, you can type CSS-like expressions that can be dynamically parsed, and produce output depending on what you type in the abb...</p>
+                  </div>
+                </div>
+                <!-- Add Pagination -->
+                
+                <!-- Add Arrows -->
+                <div class="slider__control-button-next"></div>
+                <div class="slider__control-button-prev"></div>
+              </div>
+              <div class="swiper-pagination"></div>
+              <a href="https://github.com/ZaurNatok/NewsAnalyzer/commits/master" class="section__link_big" target="_blank">Открыть в Github</a>
+        </section>
+    </div>
+        <!-- Футер -->
+        
+        <footer class="footer">
+            <p class="footer__copyright">© 2020. NewsAnalyzer</p>
+            <ul class="menu menu_footer">
+                <li class="menu__item menu__item_footer"><a href="index.html">Главная</a></li>
+                <li class="menu__item menu__item_footer"><a href="about.html">О проекте</a></li>
+                <li class="menu__item menu__item_footer"><a href="https://praktikum.yandex.ru/" target="_blank">Яндекс.Практикум</a></li>
+            </ul>
+            <ul class="footer__social">
+                <li><a href="https://github.com/ZaurNatok" target="_blank"><img src="<%=require('./images/social-icon-git.svg').default%>" alt="Портфолио на GitHub" class="social__icon"></a></li>
+                <li><a href="https://www.facebook.com/znatok" target="_blank"><img src="<%=require('./images/social-icon-fb.svg').default%>" alt="Мой аккаунт в фейсбук" class="social__icon"></a></li>
+            </ul>
+        </footer>
+        <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
+        
+    </body>
+</html>
