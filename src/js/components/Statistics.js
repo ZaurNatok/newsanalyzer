@@ -12,15 +12,15 @@ export class Statistics {
     findWeekDates() {
         for(let i = 0; i < 7; i++) {
             let weekDates = currentDate;
-            let newsCount = this.countHeadlinesByDay(this.localNews.articles, localStorage.getItem('keyword'), weekDates);
+            let newsCount = this._countHeadlinesByDay(this.localNews.articles, localStorage.getItem('keyword'), weekDates);
             let newsPercent = (newsCount * 100 / localStorage.getItem('headlinesResult'));
-            this.makeGraph(weekDates, newsCount, newsPercent);
+            this._makeGraph(weekDates, newsCount, newsPercent);
             weekDates = currentDate.setDate(currentDate.getDate() - 1)
         }
       }
 
     // Функция создания HTML разметки графика аналитики
-    makeGraph(day, newsCount, percent) {
+    _makeGraph(day, newsCount, percent) {
         const graphContainerY = document.querySelector('.analytics-graph__y');
         const graphContainerX = document.querySelector('.analytics-graph__x');
 
@@ -44,8 +44,7 @@ export class Statistics {
     }
 
     // считаем количество совпадений искомой фразы в заголовках новостей за неделю по дням
-    countHeadlinesByDay(articles, phrase, date) {
-      
+    _countHeadlinesByDay(articles, phrase, date) {
         let regexp = new RegExp(`${phrase}`, `gi`);
         let byDate = articles.map(item => ((dateFormat(item.publishedAt) == dateFormat(date))) && item.title.match(regexp));
         let resultByDate = byDate.filter(function(x) {

@@ -1,5 +1,7 @@
-import {findWeekAgoDate, renderLoading, searchInputLock, countHeadlines, searchInputUnlock, showHideButtonShowMore, counterShowNewsStart, counterShowNewsEnd} from '../utils/utils.js';
+import {findWeekAgoDate, renderLoading, searchInputLock, countHeadlines, searchInputUnlock, showHideButtonShowMore} from '../utils/utils.js';
 import {container, createnewscard} from '../../index.js';
+import {ROW_CARDS_COUNT} from '../constants/constants.js';
+
 
 export class NewsCardList {
     constructor(api, phrase, currentDate, weekAgoDate) {
@@ -8,9 +10,11 @@ export class NewsCardList {
         this.currentDate = currentDate;
         this.weekAgoDate = weekAgoDate;
         this.renderNews = this.renderNews.bind(this);
+        this.counterShowNewsStart = 0;
     }
 
     loadNews(phrase) {
+        this.counterShowNewsStart = 0;
         document.querySelector('.news__not-found').setAttribute('style', 'display:none');
         document.querySelector('.news__error').setAttribute('style', 'display:none');
         findWeekAgoDate();
@@ -53,12 +57,16 @@ export class NewsCardList {
     }
 
     renderNews(data) {
-        console.log(counterShowNewsStart, counterShowNewsEnd);
-        for(let i = counterShowNewsStart; i < counterShowNewsEnd; i++) {
+        for(let i = this.counterShowNewsStart; i < this.counterShowNewsStart + ROW_CARDS_COUNT; i++) {
             if(data.articles[i]) {
                 createnewscard.createCard(data.articles[i].title, data.articles[i].urlToImage, data.articles[i].url, data.articles[i].description, data.articles[i].publishedAt, data.articles[i].source.name);
             }
         }
-        showHideButtonShowMore(data.articles.length);
+        showHideButtonShowMore(data.articles.length, this.counterShowNewsStart);
+    }
+
+    loadMore(cards) {
+        this.counterShowNewsStart += ROW_CARDS_COUNT;
+        this.renderNews(cards);
     }
 }

@@ -1,7 +1,7 @@
 import "./pages/index.css";
 import "./fonts/fonts.css";
 import "./vendor/normalize.css";
-import {loadMore, localCardsLoad, findWeekAgoDate} from './js/utils/utils.js';
+import {findWeekAgoDate} from './js/utils/utils.js';
 import {currentDate, showMoreButton} from './js/constants/constants.js';
 import {SearchInput} from './js/components/SearchInput.js';
 import {NewsCardList} from './js/components/NewsCardList.js';
@@ -15,7 +15,6 @@ const api = new NewsApi({
   })
 
 const searchForm = document.forms.search; // Форма поиска новостей
-const searchButton = document.querySelector('.search__button'); // Кнопка поиска
 document.forms.search.elements.phrase.value = localStorage.getItem('keyword');
 export const container = document.querySelector('.news__items'); // Секция результатов поиска новостей
 export const searchInput = document.forms.search.elements.phrase;
@@ -37,10 +36,10 @@ window.onload = () => {
     console.log('хранилище пустое');
   }
   else {
-    localCardsLoad(); // если в локальном хранилище есть новости - выводим без обращения к серверу
+    cardlist.renderNews(JSON.parse(localStorage.newsCards)); // если в локальном хранилище есть новости - выводим без обращения к серверу
   }
 }
 
 showMoreButton.addEventListener('click', function() {
-    loadMore(JSON.parse(localStorage.newsCards));
+    cardlist.loadMore(JSON.parse(localStorage.newsCards));
 });

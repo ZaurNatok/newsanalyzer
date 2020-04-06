@@ -3,6 +3,7 @@ export let currentDate = new Date(); // текущая дата
 
 // для главной страницы
 export const showMoreButton = document.querySelector('.news__show-more'); // Кнопка "Показать еще"
+export const ROW_CARDS_COUNT = 3; // Сколько карточек новостей выводим за 1 раз и сколько подгружаем нажатием кнопки "Показать еще"
 
 // для страницы О проекте
 
