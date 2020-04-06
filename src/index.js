@@ -9,7 +9,7 @@ import {NewCard} from './js/components/NewCard.js';
 import {NewsApi} from './js/modules/NewsApi.js';
 
 const api = new NewsApi({
-  baseUrl: 'http://newsapi.org/v2/everything?',
+  baseUrl: 'https://newsapi.org/v2/everything?',
   apiKey: 'e0d4edaf7bc24c56befea2a3b9e45f82',
   lang: 'ru'
   })
