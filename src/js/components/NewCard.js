@@ -16,6 +16,7 @@ export class NewCard {
         const cardTitle = document.createElement('h2');
         const cardText = document.createElement('p');
         const cardSource= document.createElement('p');
+        const noImage = './images/noimage.gif';
 
         cardLink.classList.add('news__item_link');
         cardContent.classList.add('news__item');
@@ -35,7 +36,11 @@ export class NewCard {
         cardDescription.appendChild(cardText);
         cardDescription.appendChild(cardSource);
 
+        if(image === null) {
+            image = noImage;
+        }
         cardImage.setAttribute('style', 'background-image:url(' + image + ')');
+       
 
         cardLink.setAttribute('href', link);
         cardLink.setAttribute('target', '_blank');
