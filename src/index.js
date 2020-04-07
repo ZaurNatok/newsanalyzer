@@ -5,8 +5,9 @@ import {findWeekAgoDate} from './js/utils/utils.js';
 import {currentDate, showMoreButton} from './js/constants/constants.js';
 import {SearchInput} from './js/components/SearchInput.js';
 import {NewsCardList} from './js/components/NewsCardList.js';
-import {NewCard} from './js/components/NewCard.js';
+import {NewsCard} from './js/components/NewsCard.js';
 import {NewsApi} from './js/modules/NewsApi.js';
+import {formatCurrentDate} from './js/utils/dateFormat.js'
 
 const api = new NewsApi({
   baseUrl: 'https://newsapi.org/v2/everything?',
@@ -19,13 +20,13 @@ document.forms.search.elements.phrase.value = localStorage.getItem('keyword');
 export const container = document.querySelector('.news__items'); // Секция результатов поиска новостей
 export const searchInput = document.forms.search.elements.phrase;
 export let phrase = document.forms.search.elements.phrase.value;
-export const createnewscard = new NewCard(container);
-export const cardlist = new NewsCardList(api, phrase, currentDate, findWeekAgoDate());
-const search = new SearchInput(phrase);
+export const createNewsCard = new NewsCard(container);
+export const cardList = new NewsCardList(api, phrase, formatCurrentDate(currentDate), findWeekAgoDate());
+export const search = new SearchInput(phrase);
+export const searchButton = document.querySelector('.search__button');
 
 searchForm.addEventListener('submit', function(event) {
   event.preventDefault();
-
   phrase = document.forms.search.elements.phrase.value;
   search.validateForm(phrase); // проверяем: введена поисковая фраза или нет
 });
@@ -34,12 +35,14 @@ searchForm.addEventListener('submit', function(event) {
 window.onload = () => {
   if(localStorage.getItem('newsCards') === null) {
     console.log('хранилище пустое');
+    document.querySelector('.news__result').setAttribute('style', 'display:none;');
   }
   else {
-    cardlist.renderNews(JSON.parse(localStorage.newsCards)); // если в локальном хранилище есть новости - выводим без обращения к серверу
+    document.querySelector('.news__result').setAttribute('style', 'display:none;');
+    cardList.renderNews(JSON.parse(localStorage.getItem('newsCards'))); // если в локальном хранилище есть новости - выводим без обращения к серверу
   }
 }
 
 showMoreButton.addEventListener('click', function() {
-    cardlist.loadMore(JSON.parse(localStorage.newsCards));
+    cardList.loadMore(JSON.parse(localStorage.getItem('newsCards')));
 });

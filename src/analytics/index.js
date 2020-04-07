@@ -1,6 +1,3 @@
 
 import {Statistics} from '../js/components/Statistics.js';
-const localstoragenews = new Statistics(localStorage.getItem('newsCards'));
- 
-
- 
+const localStorageNews = new Statistics(localStorage.getItem('newsCards'));

@@ -3,13 +3,13 @@ import {CommitCardList} from '../js/components/CommitCardList.js'
 import {CommitCard} from '../js/components/CommitCard.js';
 import {gitContainer} from '../js/constants/constants.js';
 
-const apigit = new GithubApi({
+const apiGit = new GithubApi({
   baseUrl: 'https://api.github.com',
   gitname: 'ZaurNatok',
   repository: 'newsanalyzer'
   });
 
-const getcommits = new CommitCardList(apigit);
-export const creategitcard = new CommitCard(gitContainer);
+const getCommits = new CommitCardList(apiGit);
+export const createGitCard = new CommitCard(gitContainer);
 
-getcommits.loadCommits();
+getCommits.loadCommits();

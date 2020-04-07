@@ -12,8 +12,8 @@ export class Statistics {
     findWeekDates() {
         for(let i = 0; i < 7; i++) {
             let weekDates = currentDate;
-            let newsCount = this._countHeadlinesByDay(this.localNews.articles, localStorage.getItem('keyword'), weekDates);
-            let newsPercent = (newsCount * 100 / localStorage.getItem('headlinesResult'));
+            const newsCount = this._countHeadlinesByDay(this.localNews.articles, localStorage.getItem('keyword'), weekDates);
+            const newsPercent = (newsCount * 100 / localStorage.getItem('headlinesResult'));
             this._makeGraph(weekDates, newsCount, newsPercent);
             weekDates = currentDate.setDate(currentDate.getDate() - 1)
         }
@@ -44,10 +44,10 @@ export class Statistics {
     }
 
     // считаем количество совпадений искомой фразы в заголовках новостей за неделю по дням
-    _countHeadlinesByDay(articles, phrase, date) {
-        let regexp = new RegExp(`${phrase}`, `gi`);
-        let byDate = articles.map(item => ((dateFormat(item.publishedAt) == dateFormat(date))) && item.title.match(regexp));
-        let resultByDate = byDate.filter(function(x) {
+    _countHeadlinesByDay(news, phrase, date) {
+        const regexp = new RegExp(`${phrase}`, `gi`);
+        const byDate = news.map(item => ((dateFormat(item.publishedAt) == dateFormat(date))) && item.title.match(regexp));
+        const resultByDate = byDate.filter(function(x) {
         return x !== false && x !== null; 
         });
     return resultByDate.length;

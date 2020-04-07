@@ -5,13 +5,13 @@ export class GithubApi {
 
     getCommits() {
         return fetch(`${this.options.baseUrl}/repos/${this.options.gitname}/${this.options.repository}/commits`)
-            .then((res) =>  this.getResponseData(res))    
-            .then((data) => {
-                    return data;
+            .then((res) =>  this._getResponseData(res))    
+            .then((commits) => {
+                    return commits;
                 })
     }
 
-    getResponseData(res) {
+    _getResponseData(res) {
         if (!res.ok) {
             return Promise.reject(`Ошибка: ${res.status}`); 
         }

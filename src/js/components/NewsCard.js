@@ -1,12 +1,12 @@
 import {dateFormat} from '../utils/dateFormat.js';
 
-export class NewCard {
+export class NewsCard {
     constructor(container) {
         this.container = container;
     }
 
     createCard(title, image, link, subtitle, date, source) {
-        document.querySelector('.news__result').setAttribute('style', 'display:block;')
+        document.querySelector('.news__result').setAttribute('style', 'display:block;');
 
         const cardLink = document.createElement('a');
         const cardContent = document.createElement('div');

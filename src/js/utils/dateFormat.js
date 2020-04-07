@@ -17,7 +17,7 @@ export function dateFormat(date) {
       case 10: month="ноября"; break;
       case 11: month="декабря"; break;
     }
-    let res = articleDate.getDate() + ' ' + (month) + ', ' + articleDate.getFullYear();
+    const res = articleDate.getDate() + ' ' + (month) + ', ' + articleDate.getFullYear();
     return res;
 }
 
@@ -37,7 +37,7 @@ export function dateAnalyticsFormat(date) {
     case 6: day="сб"; break;
     case 0: day="вс"; break;
   }
-  let res = analyticsDate.getDate() + ', ' + (day);
+  const res = analyticsDate.getDate() + ', ' + (day);
   return res;
 }
 
@@ -62,6 +62,13 @@ export function dateAnalyticsGraphHeaderFormat(date) {
     case 10: month="Ноябрь"; break;
     case 11: month="Декабрь"; break;
   }
-  let res = (month);
+  const res = (month);
   return res;
+}
+
+// форматируем дату для корректного запроса на сервер newsapi
+
+export function formatCurrentDate(date) {
+  let formattedCurrentDate = date.getFullYear()+'-'+ (parseInt(date.getMonth()+1) < 10 ? '0' + parseInt(date.getMonth()+1) : parseInt(date.getMonth()+1)) +'-'+date.getDate();
+  return formattedCurrentDate;
 }

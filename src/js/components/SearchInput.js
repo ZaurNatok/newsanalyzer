@@ -1,4 +1,4 @@
-import {cardlist, phrase} from '../../index.js';
+import {cardList, phrase, searchInput, searchButton} from '../../index.js';
 
 export class SearchInput {
     constructor(phrase) {
@@ -11,7 +11,17 @@ export class SearchInput {
           }
           else {
             document.querySelector('.search__error').setAttribute('style', 'display:none'); // песли поискова яфраза есть - скрываем ошибку
-            cardlist.loadNews(phrase); // отправляем запрос на сервер новостей
+            cardList.loadNews(phrase); // отправляем запрос на сервер новостей
           }
+    }
+
+    searchInputLock() {
+      searchInput.setAttribute('disabled', true);
+      searchButton.setAttribute('disabled', true);
+    }
+
+    searchInputUnlock() {
+      searchInput.removeAttribute('disabled');
+      searchButton.removeAttribute('disabled');
     }
 }

@@ -1,5 +1,5 @@
 import {dateFormat} from '../utils/dateFormat.js';
-import "../../vendor/swiper/js/swiper.min.js";
+import Swiper from 'swiper';
 
 export class CommitCard {
     constructor(container, sliderContainer) {
@@ -45,7 +45,7 @@ export class CommitCard {
     }
 
     createPagination() {
-        let swiper = new Swiper('.swiper-container', {
+        const swiper = new Swiper('.swiper-container', {
             slidesPerView: 3,
             centeredSlides: false,
             spaceBetween: 16,
@@ -67,12 +67,10 @@ export class CommitCard {
                 spaceBetween: 16
             }             
         },
-            
             navigation: {
             nextEl: '.slider__control-button-next',
             prevEl: '.slider__control-button-prev',
             },
-            
         });
 
     }
