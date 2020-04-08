@@ -1,8 +1,17 @@
 @import url('__items/news__items.css');
 @import url('__not-found/news__not-found-icon.css');
 @import url('__not-found/news__not-found-text.css');
+@import url('__error/news__error.css');
 
 .news__not-found {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    display: none;
+}
+
+.news__error {
     display: flex;
     align-items: center;
     text-align: center;

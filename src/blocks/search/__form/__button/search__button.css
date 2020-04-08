@@ -30,6 +30,10 @@
     outline: none;
 }
 
+.search__button:disabled {
+    opacity: .5;
+}
+
 @media screen and (max-width:414px) {
     .search__button {
         margin-top: 16px;

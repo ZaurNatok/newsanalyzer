@@ -36,16 +36,23 @@
                 </header>  
                 <h1 class="search__title">Что в мире творится?</h1>
                 <p class="search__subtitle">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.</p>
-                <form action="" class="search__form">
-                    <input type="text" class="search__search-field" placeholder="Введите тему новости" required>
+                <form name="search" class="search__form">
+                    <input type="text" name="phrase" class="search__search-field" id="keyword" placeholder="Введите тему новости">
+                    <span class="search__error">Нужно ввести ключевое слово</span>
                     <button class="search__button">Искать</button>
                 </form>
                 
             </section>
-
+             
             <!-- Секция с основным контентом -->
 
             <section class="news">
+
+                <div class="section news__error">
+                    <p class="error__icon">&#10006;</p>
+                    <h3 class="news__not-found-title">Во время запроса произошла ошибка</h3>
+                    <p class="news__not-found-text">Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз</p>
+                </div>
 
                 <div class="section news__not-found">
                     <img class="news__not-found-icon" src="<%=require('./images/not-found.svg').default%>" alt="Ничего не найдено">
@@ -65,86 +72,8 @@
                         <a href="analytics.html" class="section__link">Посмотреть аналитику &gt;</a>
                     </div>
 
-                    <div class="news__items">
-                        <a href="#" class="news__item_link">
-                            <div class="news__item">
-                                <div class="item__image" style="background-image: url('<%=require('./images/image_08.png').default%>');"></div>
-                                <div class="item__description">
-                                    <p class="item__date">2 августа, 2019</p>
-                                    <h2 class="item__title">Национальное достояние - парки</h2>
-                                    <p class="item__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
-                                    <p class="item__link">Лента.ру</p>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#" class="news__item_link">
-                            <div class="news__item">
-                                <div class="item__image" style="background-image: url('<%=require('./images/image_04.png').default%>');"></div>
-                                <div class="item__description">
-                                    <p class="item__date">2 августа, 2019</p>
-                                    <h2 class="item__title">Лесные огоньки: история одной фотографии</h2>
-                                    <p class="item__text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного из местных чудес природы.</p>
-                                    <p class="item__link">Медуза</p>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#" class="news__item_link">
-                            <div class="news__item">
-                                <div class="item__image" style="background-image: url('<%=require('./images/image_04.png').default%>');"></div>
-                                <div class="item__description">
-                                    <p class="item__date">2 августа, 2019</p>
-                                    <h2 class="item__title">Лесные огоньки: история одной фотографии</h2>
-                                    <p class="item__text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного из местных чудес природы.</p>
-                                    <p class="item__link">Медуза</p>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#" class="news__item_link">
-                            <div class="news__item">
-                                <div class="item__image" style="background-image: url('<%=require('./images/image_04.png').default%>');"></div>
-                                <div class="item__description">
-                                    <p class="item__date">2 августа, 2019</p>
-                                    <h2 class="item__title">Лесные огоньки: история одной фотографии</h2>
-                                    <p class="item__text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного из местных чудес природы.</p>
-                                    <p class="item__link">Медуза</p>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#" class="news__item_link">
-                            <div class="news__item">
-                                <div class="item__image" style="background-image: url('<%=require('./images/image_07.png').default%>');"></div>
-                                <div class="item__description">
-                                    <p class="item__date">2 августа, 2019</p>
-                                    <h2 class="item__title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h2>
-                                    <p class="item__text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
-                                    <p class="item__link">Риа</p>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#" class="news__item_link">
-                            <div class="news__item">
-                                <div class="item__image" style="background-image: url('<%=require('./images/image_07.png').default%>');"></div>
-                                <div class="item__description">
-                                    <p class="item__date">2 августа, 2019</p>
-                                    <h2 class="item__title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h2>
-                                    <p class="item__text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
-                                    <p class="item__link">Риа</p>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#" class="news__item_link">
-                            <div class="news__item">
-                                <div class="item__image" style="background-image: url('<%=require('./images/image_07.png').default%>');"></div>
-                                <div class="item__description">
-                                    <p class="item__date">2 августа, 2019</p>
-                                    <h2 class="item__title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h2>
-                                    <p class="item__text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
-                                    <p class="item__link">Риа</p>
-                                </div>
-                            </div>
-                        </a>
-                        
-                    </div>
+                    <div class="news__items"></div>
+
                     <button class="news__show-more">Показать еще</button>
                 </div>
 
@@ -156,8 +85,9 @@
                 <img src="<%=require('./images/author-photo.jpg').default%>" alt="Автор сайта Наток Заур" class="about-author__photo">
                 <div class="about-author__description">
                     <h2 class="section__title">Об авторе</h2>
-                    <p class="section__text">Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владеете.</p>
-                    <p class="section__text">Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам.</p>
+                    <p class="section__text">Меня зовут Заур и я начинающий frontend разработчик. Сайт, на котором вы находитесь - моя дипломная работа. За время обучения я освоил технологии HTML, CSS, JS, Git и Webpack.</p>
+                    <p class="section__text">Процесс обучения включал в себя выполнение самостоятельных работ, с ними вы можете ознакомиться в моем портфолио на github.</p>
+                    
                 </div>    
             </section>
 
@@ -171,10 +101,11 @@
                     <li class="menu__item menu__item_footer"><a href="https://praktikum.yandex.ru/" target="_blank">Яндекс.Практикум</a></li>
                 </ul>
                 <ul class="footer__social">
-                <li><a href="https://github.com/ZaurNatok" target="_blank"><img src="<%=require('./images/social-icon-git.svg').default%>" alt="Портфолио на GitHub" class="social__icon"></a></li>
-                <li><a href="https://www.facebook.com/znatok" target="_blank"><img src="<%=require('./images/social-icon-fb.svg').default%>" alt="Мой аккаунт в фейсбук" class="social__icon"></a></li>
+                    <li><a href="https://github.com/ZaurNatok" target="_blank"><img src="<%=require('./images/social-icon-git.svg').default%>" alt="Портфолио на GitHub" class="social__icon"></a></li>
+                    <li><a href="https://www.facebook.com/znatok" target="_blank"><img src="<%=require('./images/social-icon-fb.svg').default%>" alt="Мой аккаунт в фейсбук" class="social__icon"></a></li>
                 </ul>
             </footer>
         </div>
+<script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
     </body>
 </html>

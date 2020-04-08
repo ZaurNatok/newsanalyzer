@@ -22,6 +22,11 @@ input::-webkit-input-placeholder {
     color: #B6BCBF;
 }
 
+.search__search-field:disabled {
+    background: #e1e1e1;
+}
+
+
 @media screen and (max-width:414px) {
     .search__search-field {
         width: 100%;

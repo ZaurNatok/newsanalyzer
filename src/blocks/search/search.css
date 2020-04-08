@@ -13,9 +13,9 @@
     align-items: center;
     max-width: 1440px;
     height: 576px;
+     background-image: url('../../images/main-image.jpg'); 
     position: relative;
     overflow: hidden;
-    background-image: url(../../images/main-image.jpg);
 }
 
 .search__image-container {
@@ -28,12 +28,22 @@
     width: -webkit-fill-available;
 }
 
+.search__error {
+    color: #fff;
+    margin: 5px 20px;
+    display: none;
+    background: red;
+    width: fit-content;
+    padding: 5px;
+    border-radius: 8px;
+    font-size: 12px;
+}
+
 @media screen and (max-width:414px) {
     .search {
         background-image: url('../../images/main-image-small.png');
     }
 }
-
 
 @media screen and (min-width:415px) and (max-width:767px) {
     .search {

@@ -35,9 +35,9 @@
 
             <div class="analytics__statistics">
                 <div class="section__info">
-                    <h2 class="section__title">Вы спросили: "Путешествия"</h2>
-                    <p class="section__text">Новостей за неделю: <span class="section__text section__text_important">34 424</span></p>
-                    <p class="section__text">Упоминаний в загаловках: <span class="section__text section__text_important">235</span></p>
+                    <h2 class="section__title">Вы спросили: "<span class="analytics__keyword"></span>"</h2>
+                    <p class="section__text">Новостей за неделю: <span class="section__text section__total-result section__text_important"></span></p>
+                    <p class="section__text">Упоминаний в заголовках: <span class="section__text section__total-headlines-result section__text_important"></span></p>
                 </div>
             </div>
 
@@ -50,7 +50,7 @@
                 <h3 class="section__small-title">Аналитика по дням</h3>
                 <div class="analytics-graph">
                     <div class="analytics-graph__head">
-                        <p class="analytics-graph__first-column">Дата (август)</p>
+                        <p class="analytics-graph__first-column">Дата (<span class="analytics-graph__month"></span>)</p>
                         <p class="analytics-graph__second-column">Кол-во упоминаний</p>
                     </div>
                     <div class="analytics__row">
@@ -62,22 +62,10 @@
                     </div>
                     <div class="analytics-graph__columns">
                         <div class="analytics-graph__y">
-                            <p class="analytics-graph__column-y">19, пн</p>
-                            <p class="analytics-graph__column-y">20, вт</p>
-                            <p class="analytics-graph__column-y">21, ср</p>
-                            <p class="analytics-graph__column-y">22, чт</p>
-                            <p class="analytics-graph__column-y">23, пт</p>
-                            <p class="analytics-graph__column-y">24, сб</p>
-                            <p class="analytics-graph__column-y">25, вс</p>
+
                         </div>
                         <div class="analytics-graph__x">
-                            <p class="analytics-graph__column-x" style="width: 15%">15</p>
-                            <p class="analytics-graph__column-x" style="width: 18%">18</p>
-                            <p class="analytics-graph__column-x" style="width: 11%">11</p>
-                            <p class="analytics-graph__column-x" style="width: 39%">39</p>
-                            <p class="analytics-graph__column-x" style="width: 45%">45</p>
-                            <p class="analytics-graph__column-x" style="width: 73%">73</p>
-                            <p class="analytics-graph__column-x" style="width: 34%">34</p>
+
                         </div>
                     </div>
                     <div class="analytics__row">
@@ -107,5 +95,6 @@
                 <li><a href="https://www.facebook.com/znatok" target="_blank"><img src="<%=require('./images/social-icon-fb.svg').default%>" alt="Мой аккаунт в фейсбук" class="social__icon"></a></li>
             </ul>
         </footer>
+    <script src="<%= htmlWebpackPlugin.files.chunks.analytics.entry %>"></script>
     </body>
 </html>
