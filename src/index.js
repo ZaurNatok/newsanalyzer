@@ -2,7 +2,7 @@ import "./pages/index.css";
 import "./fonts/fonts.css";
 import "./vendor/normalize.css";
 import {findWeekAgoDate} from './js/utils/utils.js';
-import {currentDate, showMoreButton} from './js/constants/constants.js';
+import {currentDate, showMoreButton, totalResult} from './js/constants/constants.js';
 import {SearchInput} from './js/components/SearchInput.js';
 import {NewsCardList} from './js/components/NewsCardList.js';
 import {NewsCard} from './js/components/NewsCard.js';
@@ -46,3 +46,5 @@ window.onload = () => {
 showMoreButton.addEventListener('click', function() {
     cardList.loadMore(JSON.parse(localStorage.getItem('newsCards')));
 });
+
+totalResult.textContent = localStorage.getItem('totalResult');

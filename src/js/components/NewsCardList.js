@@ -1,6 +1,6 @@
 import {findWeekAgoDate, renderLoading, countHeadlines, showHideButtonShowMore} from '../utils/utils.js';
 import {container, createNewsCard, search} from '../../index.js';
-import {ROW_CARDS_COUNT} from '../constants/constants.js';
+import {ROW_CARDS_COUNT, totalResult} from '../constants/constants.js';
 
 export class NewsCardList {
     constructor(api, phrase, currentDate, weekAgoDate) {
@@ -43,6 +43,7 @@ export class NewsCardList {
             })
             .then(() => {
                 this.renderNews(JSON.parse(localStorage.getItem('newsCards')));
+                totalResult.textContent = localStorage.getItem('totalResult');
             })
 
             // если во время запроса произошла ошибка - выводим блок с ошибкой для пользователя
