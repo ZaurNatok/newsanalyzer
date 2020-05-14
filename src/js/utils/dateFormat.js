@@ -45,25 +45,33 @@ export function dateAnalyticsFormat(date) {
 
 export function dateAnalyticsGraphHeaderFormat(date) {
   let analyticsDate = new Date(date);
-  let month = analyticsDate.getMonth() + 1;
-  
-  switch (month)
-  {
-    case 0: month="Январь"; break;
-    case 1: month="Февраль"; break;
-    case 2: month="Март"; break;
-    case 3: month="Апрель"; break;
-    case 4: month="Май"; break;
-    case 5: month="Июнь"; break;
-    case 6: month="Июль"; break;
-    case 7: month="Август"; break;
-    case 8: month="Сентябрь"; break;
-    case 9: month="Октябрь"; break;
-    case 10: month="Ноябрь"; break;
-    case 11: month="Декабрь"; break;
+  let month = analyticsDate.getMonth();
+
+  if(month === 0) {
+    return 'ЯНВАРЬ';
+  } if (month === 1) {
+    return 'ФЕВРАЛЬ';
+  } if (month === 2) {
+    return 'МАРТ';
+  } if (month === 3) {
+    return 'АПРЕЛЬ';
+  } if (month === 4) {
+    return 'МАЙ';
+  } if (month === 5) {
+    return 'ИЮНЬ';
+  } if (month === 6) {
+    return 'ИЮЛЬ';
+  } if (month === 7) {
+    return 'АВГУСТ';
+  } if (month === 8) {
+    return 'СЕНТЯБРЬ';
+  } if (month === 9) {
+    return 'ОКТЯБРЬ';
+  } if (month === 10) {
+    return 'НОЯБРЬ';
+  } if (month === 11) {
+    return 'ДЕКАБРЬ';
   }
-  const res = (month);
-  return res;
 }
 
 // форматируем дату для корректного запроса на сервер newsapi
