@@ -10,7 +10,7 @@ import {NewsApi} from './js/modules/NewsApi.js';
 import {formatCurrentDate} from './js/utils/dateFormat.js'
 
 const api = new NewsApi({
-  baseUrl: 'https://newsapi.org/v2/everything?',
+  baseUrl: 'https://praktikum.tk/news/v2/everything?',
   apiKey: 'e0d4edaf7bc24c56befea2a3b9e45f82',
   lang: 'ru'
   })
