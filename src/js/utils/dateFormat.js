@@ -43,10 +43,9 @@ export function dateAnalyticsFormat(date) {
 
 // функция форматирования даты для header графика аналитики
 
-export function dateAnalyticsGraphHeaderFormat(date) {
-
-  let analyticsDate = new Date(date);
-  let month = analyticsDate.getMonth() + 1;
+export function dateAnalyticsGraphHeaderFormat() {
+  let analyticsDate = new Date();
+  let month = analyticsDate.getMonth();
 
   if(month === 0) {
     return 'ЯНВАРЬ';

@@ -58,6 +58,7 @@ export class Statistics {
         totalResult.textContent = localStorage.getItem('totalResult'); // количество новостей за неделю всего
         analyticsKeyword.textContent = localStorage.getItem('keyword'); // ключевое слово
         totalHeadlineResult.textContent = localStorage.getItem('headlinesResult'); // количество вхождений ключевого слова в заголовках новостей
-        graphHeaderMonth.textContent = dateAnalyticsGraphHeaderFormat(currentDate); // форматирование текущего месяца для вывода в header графика
+        graphHeaderMonth.textContent = dateAnalyticsGraphHeaderFormat(); // форматирование текущего месяца для вывода в header графика
+        
     }
 }
